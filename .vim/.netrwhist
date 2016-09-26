@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/workspace/HwMarket/src'
+let g:netrw_dirhist_2='/workspace/HwMarket/src/com'
+let g:netrw_dirhist_3='/workspace/HwMarket/src/com/wziwen'
+let g:netrw_dirhist_4='/workspace/HwMarket/src/com/wziwen/hwmarket'
