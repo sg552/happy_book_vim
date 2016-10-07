@@ -9,6 +9,8 @@ Vim的插件也无所不包。
 
 # 安装( Linux, Mac)
 
+最快的安装方式:
+
 ## 前提
 
 你安装的是 vim 7.3+ 版本。
@@ -20,6 +22,12 @@ Vim的插件也无所不包。
 ```
 $ cp .vimrc ~
 $ cp .vim ~ -r
+```
+
+然后再把 .zip 解压缩:
+
+```
+$ unzip vim_folder.zip
 ```
 
 ## 运行Vundle 来安装各种插件
