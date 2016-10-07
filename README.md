@@ -20,15 +20,14 @@ Vim的插件也无所不包。
 就是把两个配置文件，都放到home目录下。
 
 ```
+$ unzip vim_folder.zip  (输入A , 覆盖)
 $ cp .vimrc ~
 $ cp .vim ~ -r
 ```
 
-然后再把 .zip 解压缩:
+就安装好了.
 
-```
-$ unzip vim_folder.zip
-```
+如果还不行的话,继续往下看.
 
 ## 运行Vundle 来安装各种插件
 
