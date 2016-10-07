@@ -27,22 +27,3 @@ $ cp .vim ~ -r
 
 就安装好了.
 
-如果还不行的话,继续往下看.
-
-## 运行Vundle 来安装各种插件
-
-先进入到Vim:
-
-```
-$ vim
-```
-
-然后输入：
-
-```
-:BundleInstall
-```
-
-就会自动安装好所有的vim 插件。
-
-![vundle](vim-vundle.png)
