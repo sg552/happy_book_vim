@@ -33,8 +33,21 @@ $ cp .vimrc ~               # 把 配置文件 .vimrc 放到 HOME 目录.
 
 更多用法,请参考 Vundle 项目. 虽然我这个是老版本的配置文件,但是很多新版本的语法,稍加修改,就可以用.
 
+# 教程
+
+请直接来慕课网看(全都是gif动画演示! 不要觉得太经验哦亲!)
+
+[键盘方法论:  在键盘面前,你就是钢琴手!  ](http://www.imooc.com/article/13277)
+
+[最牛编辑器: Vim.  第一节](http://www.imooc.com/article/13269)
+
+[最牛编辑器: Vim.  第二节](http://www.imooc.com/article/13272)
+
+[最牛编辑器: Vim.  第三节](http://www.imooc.com/article/13275)
+
 # 欢迎贡献
 
 尽情的给我pull request吧!
 
 shensiwei@siwei.tech
+
