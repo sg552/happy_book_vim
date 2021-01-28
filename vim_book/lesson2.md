@@ -1,23 +1,8 @@
-# 学习收获.
-
-- 见识下最炫酷的编辑器是什么样的.
-- 顺手可以学习下.
-
-# 目录
-
-[键盘方法论:  在键盘面前,你就是钢琴手!  ](http://www.imooc.com/article/13277)
-
-[最牛编辑器: Vim.  第一节](http://www.imooc.com/article/13269)
-
-[最牛编辑器: Vim.  第二节](http://www.imooc.com/article/13272)
-
-[最牛编辑器: Vim.  第三节](http://www.imooc.com/article/13275)
-
-上面三节课大家都要学会, 都是干货, 我把自己常用的Vim 操作都列出来了. 没有一个是用不上的.
-
 # 各种快捷导航功能
 
-Vim 的精髓，在于不用鼠标，把很多鼠标的操作交给了键盘。 所以，一旦大家掌握了下面的操作，别人看你的屏幕时就会觉得眼花缭乱。
+Vim 的精髓，在于不用鼠标，把很多鼠标的操作交给了键盘。
+
+所以，一旦大家掌握了下面的操作，别人看你的屏幕时就会觉得眼花缭乱。
 
 ##  快速打开文件
 
@@ -27,7 +12,11 @@ Vim 的精髓，在于不用鼠标，把很多鼠标的操作交给了键盘。 
 
 我输入 `ab`, vim 也会把 `aub` 的结果列出来。
 
-![图片描述][3]
+注意：有些mac同学的vim里用不了这个功能，有兴趣的同学欢迎提交pull request来说明解决方案。
+
+不过实际部署的时候不要紧。一般使用ctrl + e, 可以很好的弥补。
+
+![fuzzy-find](images/vim-fuzzy-find.gif)
 
 ## 快速打开历史文件
 
@@ -35,14 +24,14 @@ Vim 的精髓，在于不用鼠标，把很多鼠标的操作交给了键盘。 
 
 `ctrl + e` 即可。  （这个快捷键是我自己配的）
 
- ![图片描述][4]
+ ![ctrl-e](images/vim-ctrl-e-recent-files.gif)
 
 ## 跳到行首， 行末
 
 - 跳到当前行的末尾：  `shift + 4`  (意为  `$` , 这是正则表达式中 末尾的意思）
 - 跳到当前行的行首：  `0`
 
-![图片描述][5]
+![head-and-end](images/vim-jump-to-line-end-head.gif)
 
 
 ## 快速跳到文件首行 ， 尾行。
@@ -52,7 +41,7 @@ Vim 的精髓，在于不用鼠标，把很多鼠标的操作交给了键盘。 
 - `gg`: 第一行
 - `shift + g`: 末行。
 
- ![图片描述][6]
+ ![gg-shift-g](images/vim-go-top-go-bottom.gif)
 
 
 ## 快速跳到 上一次 / 下一次编辑的地方：
@@ -60,14 +49,14 @@ Vim 的精髓，在于不用鼠标，把很多鼠标的操作交给了键盘。 
 - 跳到 上一次编辑的地方：  `g;`
 - 跳到 下一次编辑的地方：  `g,`
 
-![图片描述][8]
+![gg-g;](images/vim-jump-to-last-next-edit-place.gif)
 
 ## 返回上一次/下一次编辑的文件或位置
 
 - 快速返回上一次编辑的文件：  `ctrl + o`  ( o 意为 outer )
 - 快速返回下一次编辑的文件：  `ctrl + i`   (  i 意为 inner )
 
-![图片描述][9]
+![ctrl-i-ctrl-o](images/vim-ctrl-i-ctrl-o.gif)
 
 # 输入模式
 
@@ -82,7 +71,7 @@ Vim 的精髓，在于不用鼠标，把很多鼠标的操作交给了键盘。 
 - 在光标下行增加内容：  `o`
 - 在光标上行增加内容：  `shift + o` （这个操作往往会有500毫秒的延迟）
 
-![图片描述][7]
+![vim-insert](images/vim-insert-mode.gif)
 
 ## 删除
 
@@ -93,7 +82,7 @@ Vim 的精髓，在于不用鼠标，把很多鼠标的操作交给了键盘。 
 - 删掉一行： `dd`
 - 删掉多行： `shift +v`, 然后 `x` 或者 `d`
 
-![图片描述][1]
+![delete](images/vim-delete.gif)
 
 ## 复制与粘贴
 
@@ -103,15 +92,5 @@ Vim 的精髓，在于不用鼠标，把很多鼠标的操作交给了键盘。 
 - 复制当前行：  `yy`
 - 粘贴:  `p`
 
-![图片描述][2]
+![paste](images/vim-paste.gif)
 
-
-  [1]: http://img.mukewang.com/57e8ca8e00016e3012680598.gif
-  [2]: http://img.mukewang.com/57e8d8740001a9ee12680598.gif
-  [3]: http://img.mukewang.com/57e8d9de00011fdd00160028.gif
-  [4]: http://img.mukewang.com/57e8da6100015abe12680598.gif
-  [5]: http://img.mukewang.com/57e8dbf60001dcef09340522.gif
-  [6]: http://img.mukewang.com/57e8da9a0001c17c06340007.gif
-  [7]: http://img.mukewang.com/57e8db42000167a808730007.gif
-  [8]: http://img.mukewang.com/57e8dc5500015dd209340524.gif
-  [9]: http://img.mukewang.com/57e8dcb00001a41009340524.gif
