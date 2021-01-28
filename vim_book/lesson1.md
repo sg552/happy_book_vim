@@ -1,3 +1,5 @@
+# 第一课
+
 原创不容易. 制作gif图,断断续续花了2,3天.   发布在慕课网花了3小时.  希望能对大家有所帮助!
 
 # 阅读完本文的收获
@@ -5,18 +7,6 @@
 - 使用键盘进行上下左右
 - 3倍提高你的写代码效率
 - 告别菜鸟行列，蜕变成一名职业程序员。
-
-# 目录
-
-[键盘方法论:  在键盘面前,你就是钢琴手!  ](http://www.imooc.com/article/13277)
-
-[最牛编辑器: Vim.  第一节](http://www.imooc.com/article/13269)
-
-[最牛编辑器: Vim.  第二节](http://www.imooc.com/article/13272)
-
-[最牛编辑器: Vim.  第三节](http://www.imooc.com/article/13275)
-
-上面三节课大家都要学会, 都是干货, 我把自己常用的Vim 操作都列出来了. 没有一个是用不上的.
 
 # 为什么学习Vim?
 
@@ -30,7 +20,7 @@ Vim的基本功能极其强大。 Vim的插件也无所不包。
 
 有朋友把各种编辑器的学习曲线放在了一起比较:
 
-![图片描述][1]
+![图片描述](images/compare.jpg)
 
 这是个笑话，大家不用怕。 Vim其实很好学。 我已经帮你把环境搭建好了。
 
@@ -63,7 +53,7 @@ Vim的每个键都是需要盲打的。 所以，指法不好的同学，赶紧�
 
 安装完毕后， 如果能看到下列的屏幕，说明你安装成功了：
 
-![图片描述][2]
+![Vim ready](images/lesson_1_vim_ready.jpeg)
 
 # 安装Vim的插件。
 
@@ -100,7 +90,7 @@ $ vim
 ```
 
 就会自动安装好所有的vim 插件。如下图：
-![图片描述][3]
+![vundle ready](images/lesson_1_vundle_ready.jpeg)
 
 现在，我们就准备好了。
 
@@ -135,7 +125,7 @@ Vim有三种模式：
 
 这是所有同学都觉得最震撼的一幕。 有了它，标志着你踏入了职业程序员的关键一步。(Emac中的导航也是一样的）
 
-![图片描述][4]
+![hljk](images/vim-hjlk.gif)
 
 
 ## 下一个词，上一个词
@@ -145,20 +135,21 @@ Vim有三种模式：
 
 所以，大家要记住，按一下`w` 相当于按多下`l`.
 
-![图片描述][5]
+![w-b](images/vim-w-b.gif)
 
 ## 向下一屏，向上一屏。
 
 `ctrl + f`:  向下一屏（f = forward)
 `ctrl + b`: 向上一屏（b = backward)
 
-![图片描述][6]
+![f-b](images/vim-ctrl-b-ctrl-f.gif)
 
 ## 选择多行
 
 `shift + v`， 然后上下移动。
 
-![图片描述][7]
+![shift-v](images/vim-multiple-line-chosen.gif)
+
 (你也可以 直接 `v`然后上下左右移动， 这也是选择多行，只是不是整行整行的选择。动手试一下吧！)
 
 ## 搜索
@@ -167,13 +158,13 @@ Vim有三种模式：
 继续搜索下一个： `n`
 搜索前一个： `shift + n`
 
-![图片描述][8]
+![search](images/vim-search.gif)
 
 ## 在当前整个文件中，替换(也叫全局替换）
 
 `:%s/原来的字符串/新字符串/`
 
-![图片描述][9]
+![search-replace](images/vim-gsearch-greplace.gif)
 
 （如果某个字符串在某一行出现了多次，希望对它所有出现的次数都替换的话，就在末尾加个`g` ，像这样：    `:%s/原来的字符串/新字符串/g` )
 
@@ -182,14 +173,14 @@ Vim有三种模式：
 1. 先 `shift + v` 选中若干行
 2. `:s/原来的/新的字符串`
 
-![图片描述][11]
+![local-replace](images/vim-local-replace.gif)
 
 ## 代码补全
 
 - `ctrl + n` : 下一个候选
 - `ctrl + p` : 上一个候选
 
-![图片描述][10]
+![complete](images/vim-complete.gif)
 
 # 注意：要有个好键盘。
 
@@ -197,15 +188,3 @@ Vim有三种模式：
 
 Mac键盘不好。扁扁平平，那是给咖啡厅里的文艺青年用的。（提一句，我见到几乎所有iOS程序员的键盘水平都不好。我认为这跟 Mac 笔记本键盘有直接原因。还是忍痛换了吧, 各位iOS兄弟们。
 
-
-  [1]: http://img.mukewang.com/57e8b6f50001066a04650314.jpg
-  [2]: http://img.mukewang.com/57e8b9c00001003509970453.png
-  [3]: http://img.mukewang.com/57e8bb4f000198f808150512.png
-  [4]: http://img.mukewang.com/57e8bebb0001fe9712600393.gif
-  [5]: http://img.mukewang.com/57e8bf5e0001d06912600597.gif
-  [6]: http://img.mukewang.com/57e8c0420001c02912600081.gif
-  [7]: http://img.mukewang.com/57e8c1590001f41512600237.gif
-  [8]: http://img.mukewang.com/57e8c24e0001227e12600597.gif
-  [9]: http://img.mukewang.com/57e8c1bd0001d1db12600598.gif
-  [10]: http://img.mukewang.com/57e8c3610001f65d12600393.gif
-  [11]: http://img.mukewang.com/57e8c3190001d87812600419.gif
