@@ -3,16 +3,6 @@
 - 一种思维独创的键盘指法: 小指的 “指根” 按 `ctrl` 键.
 - 方法论: 眼睛不离开屏幕,才是高效的程序员
 
-# 目录
-
-[键盘方法论:  在键盘面前,你就是钢琴手!  ](http://www.imooc.com/article/13277)
-
-[最牛编辑器: Vim.  第一节](http://www.imooc.com/article/13269)
-
-[最牛编辑器: Vim.  第二节](http://www.imooc.com/article/13272)
-
-[最牛编辑器: Vim.  第三节](http://www.imooc.com/article/13275)
-
 # 如何使用键盘.
 
 敲键盘是很重要的事情。键盘瞧不好，会直接影响到工作效率。
@@ -57,11 +47,11 @@ F1，F2，...F12， 也都最好是可以一键按到的。
 
 所以，这个是比较合适的布局：
 
-![比较合适的键盘图](http://siwei.me/system/images/W1siZiIsIjIwMTUvMDEvMDMvMjJfNDBfMDZfNDE1X18uanBnIl0sWyJwIiwidGh1bWIiLCIyMjV4MjU1PiJdXQ/%E5%90%88%E9%80%82%E7%9A%84%E9%94%AE%E7%9B%98%E5%B8%83%E5%B1%80.jpg)
+![比较合适的键盘图](images/ikbc_keyboard.jpeg)
 
 如果经常使用 F1, F2 等键的话, 不建议购买 87键的小键盘。 例如下面这个：
 
-![不好的87键键盘](http://siwei.me/system/images/W1siZiIsIjIwMTUvMDEvMDMvMjJfNDNfMzRfNTM2X18uanBnIl0sWyJwIiwidGh1bWIiLCI0NTB4NDUwPiJdXQ/%E4%B8%8D%E5%90%88%E9%80%82%E7%9A%84%E9%94%AE%E7%9B%98.jpg)
+![不好的87键键盘](images/bad_keyboard.jpeg)
 
 因为这种小键盘的很多键是难以按到的。你需要用多个组合键才能按到。比如说F1，F2， 这些都需要使用莫名其妙`fn` + `key`的组合键。问题就来了，你能做到不看键盘，就能准确的摸到你的`fn` 键吗？
 
@@ -69,7 +59,9 @@ F1，F2，...F12， 也都最好是可以一键按到的。
 
 记得使用小指的掌根去按`ctrl`. 小指掌根是你的第11,12个手指。当你按ctrl + f 时(vim中的翻页 操作）, 这个ctrl应该是用右手掌的小指掌根按的。 同理，ctrl + n 时，这个ctrl应该是左手 的小指掌根来按。
 
-![图片描述][1]
+（注意：身高1米65以下的妹子似乎无法做到这个动作 `-_-!`)
+
+![press-control](images/press_control.jpeg)
 
 绝对不是看一眼键盘，然后用食指去按`ctrl`.
 
@@ -122,8 +114,4 @@ mac 中的 上一个标签页： `command + shift + [ 或 ]`    ，其他在Mac�
 所以，我发现大部分用mac的同学都要在敲键盘的时候用眼睛去找， 没见过任何一个Vim用的比我熟悉的Mac用户。
 
 所以不建议使用 苹果笔记本的键盘.
-
-  [1]: http://img.mukewang.com/57e8f7f9000129b908000450.jpg
-
-
 
