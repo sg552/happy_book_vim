@@ -13,7 +13,6 @@ set number
 set autoindent
 set hlsearch
 set incsearch
-set encoding=utf-8
 " highlight Normal ctermfg=white ctermbg=cyan
 set nowrap
 syntax enable
@@ -109,13 +108,19 @@ Bundle 'vividchalk.vim'
 Bundle 'The-NERD-Commenter'
 Bundle 'The-NERD-tree'
 Bundle 'kchmck/vim-coffee-script'
-Bundle 'posva/vim-vue'
+Bundle 'vim-vue'
 
 colorscheme vividchalk
 set background=light
 set background=dark
 Bundle 'mru.vim'
 Bundle 'greplace.vim'
+
+Bundle 'rust-lang/rust.vim'
+
+Bundle 'tomlion/vim-solidity'
+
+Bundle 'leafgarland/typescript-vim'
 
 filetype plugin indent on     " required!
 "
@@ -145,10 +150,3 @@ map <Leader>rj :Rjavascript<CR>
 "autocmd BufWritePost,FileWritePost *.coffee :silent !coffee --compile --join m-cms-preview/static/javascripts/angular/controllers.js m-cms-preview/static/javascripts/angular/controllers.coffee m-cms-preview/static/javascripts/angular/tabs/*coffee m-cms-preview/static/javascripts/angular/applications/*coffee m-cms-preview/static/javascripts/angular/users/*coffee m-cms-preview/static/javascripts/angular/commons/*coffee
 "autocmd BufWritePost,FileWritePost *.coffee :silent !coffee --compile m-cms-preview/static/javascripts/angular/app.coffee m-cms-preview/static/javascripts/angular/directives.coffee m-cms-preview/static/javascripts/angular/filters.coffee m-cms-preview/static/javascripts/angular/services.coffee
 "
-"
-"
-" 让command -t 忽略一些文件
-"set wildignore+=*.o,*.obj,.git,build,dist,node_modules
-"let g:fuf_dir_exclude = '\v(^|[/\\])\.(hg|git|bzr|dist|node_modules|build)($|[/\\])'
-let g:fuf_dir_exclude = '\v.(hg|git|bzr|dist|node_modules|build)'
-let g:fuf_file_exclude = '\v\~$|\.o$|\.exe$|\.bak$|\.swp$|\.class$|dist*|node_module*|build*'
