@@ -1,0 +1,167 @@
+
+filetype on
+set langmenu=none
+set fileencodings=utf-8
+set fileencoding=utf-8
+set encoding=utf8
+
+set expandtab
+set shiftwidth=2
+set softtabstop=2
+set tabstop=2
+set number
+set autoindent
+set hlsearch
+set incsearch
+set encoding=utf-8
+" highlight Normal ctermfg=white ctermbg=cyan
+set nowrap
+syntax enable
+
+let g:proj_window_width=5
+set laststatus=2
+
+
+
+" Strip trailing whitespace
+function! <SID>StripTrailingWhitespaces()
+    " Preparation: save last search, and cursor position.
+    let _s=@/
+    let l = line(".")
+    let c = col(".")
+    " Do the business:
+    %s/\s\+$//e
+    " Clean up: restore previous search history, and cursor position
+    let @/=_s
+    call cursor(l, c)
+endfunction
+autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
+
+" match Todo /\s\+$/
+filetype plugin on
+let mapleader = ","
+
+
+" THE VIM OUTLINER (TVO)
+" defaults:
+let otl_install_menu=1
+let no_otl_maps=0
+let no_otl_insert_maps=0
+
+" overrides:
+let otl_bold_headers=0
+let otl_use_thlnk=0
+
+" au BufWinLeave *.otl mkview
+" au BufWinEnter *.otl silent loadview
+let maplocalleader = ","
+
+""Only do this part when compiled with support for autocommands.
+"if has("autocmd")
+"  autocmd Filetype java setlocal omnifunc=javacomplete#Complete
+"endif
+
+
+set nocompatible               " be iMproved
+filetype off                   " required!
+
+
+
+
+
+
+
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+
+
+
+
+" ============== Vundle part =================
+
+" let Vundle manage Vundle
+" required!
+Plugin 'tpope/vim-fugitive'
+Plugin 'Lokaltog/vim-easymotion'
+Plugin 'tpope/vim-rails.git'
+"Plugin 'tsaleh/vim-matchit.git'
+Plugin 'ecomba/vim-ruby-refactoring.git'
+
+" vim-scripts repos
+Plugin 'L9'
+Plugin 'FuzzyFinder'
+
+Plugin 'git://git.wincent.com/command-t.git'
+Plugin 'YankRing.vim'
+Plugin 'vividchalk.vim'
+Plugin 'The-NERD-Commenter'
+Plugin 'The-NERD-tree'
+Plugin 'mru.vim'
+Plugin 'greplace.vim'
+Plugin 'posva/vim-vue'
+
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+colorscheme vividchalk
+set background=light
+set background=dark
+
+"
+" Brief help
+" :BundleList          - list configured bundles
+" :BundleInstall(!)    - install(update) bundles
+" :BundleSearch(!) foo - search(or refresh cache first) for foo
+" :BundleClean(!)      - confirm(or auto-approve) removal of unused bundles
+"
+" see :h vundle for more details or wiki for FAQ
+" NOTE: comments after Bundle command are not allowed..
+
+map <C-T> :FufFile<CR>
+map <C-E> :MRU<CR>
+
+map <C-S-M> :Emodel<CR>
+map <C-S-C> :Econtroller<CR>
+map <C-S-U> :Eunit<CR>
+map <C-S-L> :Efunctional<CR>
+map <C-H> :Ehelper<CR>
+map <C-V> :Eview<CR>
+
+map <C-J> :ZoomWin<CR>
+
+
+map <S-F> <Leader><Leader>f
+map <Leader>a :YRShow<CR>
+map <Leader>t :NERDTree<CR>
+map <Leader>q :q<CR>
+map <Leader>f :Rfixture<CR>
+map <Leader>rj :Rjavascript<CR>
+
+"autocmd BufWritePost,FileWritePost *.coffee :silent !coffee --compile --join appstore/static/javascripts/angular/controllers.js appstore/static/javascripts/angular/controllers.coffee appstore/static/javascripts/angular/tabs/*coffee appstore/static/javascripts/angular/applications/*coffee appstore/static/javascripts/angular/users/*coffee appstore/static/javascripts/angular/commons/*coffee
+"autocmd BufWritePost,FileWritePost *.coffee :silent !coffee --compile appstore/static/javascripts/angular/app.coffee appstore/static/javascripts/angular/directives.coffee appstore/static/javascripts/angular/filters.coffee appstore/static/javascripts/angular/services.coffee
+
+"autocmd BufWritePost,FileWritePost *.coffee :silent !coffee --compile --join tvboxcms/static/javascripts/angular/controllers.js tvboxcms/static/javascripts/angular/controllers.coffee tvboxcms/static/javascripts/angular/tabs/*coffee tvboxcms/static/javascripts/angular/applications/*coffee tvboxcms/static/javascripts/angular/users/*coffee tvboxcms/static/javascripts/angular/commons/*coffee
+"autocmd BufWritePost,FileWritePost *.coffee :silent !coffee --compile tvboxcms/static/javascripts/angular/app.coffee tvboxcms/static/javascripts/angular/directives.coffee tvboxcms/static/javascripts/angular/filters.coffee tvboxcms/static/javascripts/angular/services.coffee
+
+"autocmd BufWritePost,FileWritePost *.coffee :silent !coffee --compile --join m-cms-preview/static/javascripts/angular/controllers.js m-cms-preview/static/javascripts/angular/controllers.coffee m-cms-preview/static/javascripts/angular/tabs/*coffee m-cms-preview/static/javascripts/angular/applications/*coffee m-cms-preview/static/javascripts/angular/users/*coffee m-cms-preview/static/javascripts/angular/commons/*coffee
+"autocmd BufWritePost,FileWritePost *.coffee :silent !coffee --compile m-cms-preview/static/javascripts/angular/app.coffee m-cms-preview/static/javascripts/angular/directives.coffee m-cms-preview/static/javascripts/angular/filters.coffee m-cms-preview/static/javascripts/angular/services.coffee
+"" For fuf plugin , ignore the node_modules folder
+" Truth be told, I don't remember what these do, but I must have
+" found them necessary back when I installed fuzzyfinder years ago
+let s:slash = '[/\\]'
+let s:startname = '(^|'.s:slash.')'
+let s:endname = '($|'.s:slash.')'
+
+" directories and extensions to ignore when listing files
+" these contain a lot of Python-isms, yours will probably vary
+let s:extension = '\.bak|\.dll|\.exe|\.o|\.pyc|\.pyo|\.swp|\.swo'
+let s:dirname = 'build|deploy|dist|vms|\.bzr|\.git|\.hg|\.svn|.+\.egg-info|node_modules|logs|log|tmp'
+let g:fuf_file_exclude = '\v'.'('.s:startname.'('.s:dirname.')'.s:endname.')|(('.s:extension.')$)'
+let g:fuf_dir_exclude = '\v'.s:startname.'('.s:dirname.')'.s:endname
+
+" limit number of displayed matches
+" (makes response instant even on huge source trees)
+let g:fuf_enumeratingLimit = 2000
