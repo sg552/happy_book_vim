@@ -81,9 +81,5 @@ unzip vim_folder.zip
 
 [最牛编辑器: Vim.  第三节](http://www.imooc.com/article/13275)
 
-# 欢迎贡献
 
-尽情的给我pull request吧!
-
-shensiwei@sina.com
 
