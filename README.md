@@ -55,10 +55,20 @@ cd ~
 unzip vim_folder.zip
 ```
 
-3.进入到vim中,然后
+3.a 进入到vim中,然后
 
 ```
 :PluginInstall
+```
+
+3.b 如果上述步骤(3.a)遇到错误的话，就这样：
+
+```
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
+进入vim
+
+:BundleInstall
 ```
 
 就成功了
