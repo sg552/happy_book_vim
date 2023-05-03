@@ -14,7 +14,7 @@ Vim的插件也无所不包。
 1. vim 教程
 2. 我的Vim配置和vim插件。放在这里，供大家使用。
 
-# 安装
+# 安装 ( 对于vim <= 8.1的版本)
 
 下面仅限于Linux, Mac.
 
@@ -38,13 +38,33 @@ $ cp .vim ~ -r              # 把 解压缩出来的.vim 文件夹放到 HOME目
 $ cp .vimrc ~               # 把 配置文件 .vimrc 放到 HOME 目录.
 ```
 
-就安装好了.
+就安装好了. 这里用的是古老版本的 vim bundle 来管理插件的（似乎是这个名字）,大概是2013年前后
 
-# 说明
+# 安装（对于vim > 8.1 < vim 9.0 的版本)
 
-没有使用最新版本的Vundle, 用的还是2013年的版本.  因为我平时要打理公司, 没有时间.
+```
 
-更多用法,请参考 Vundle 项目. 虽然我这个是老版本的配置文件,但是很多新版本的语法,稍加修改,就可以用.
+$ unzip vim_folder.zip      # 解压缩 这个文件.
+$ cp .vim ~ -r              # 把 解压缩出来的.vim 文件夹放到 HOME目录
+$ cp dot_vimrc_for_vim8 ~/.vimrc               # 把 配置文件 .vimrc 放到 HOME 目录.
+$ vim
+$ :BundleInstall
+```
+
+就安装好了. 这里用的是Vundle的新版。(2016年以后出来的吧）
+
+# 安装（对于vim9.0 的版本)
+
+```
+$ unzip dot_vim_for_9.zip      # 解压缩 这个文件.
+$ cp .vim ~ -r              # 把 解压缩出来的.vim 文件夹放到 HOME目录
+$ cp dot_vimrc_for_vim9 ~/.vimrc               # 把 配置文件 .vimrc 放到 HOME 目录.
+$ vim
+$ :PlugInstall
+```
+
+这个使用了最新的vim-plug来管理插件。
+
 
 # 教程
 
