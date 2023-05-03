@@ -14,23 +14,17 @@ Vim的插件也无所不包。
 1. vim 教程
 2. 我的Vim配置和vim插件。放在这里，供大家使用。
 
-# 安装 ( 对于vim <= 8.1的版本)
-
 下面仅限于Linux, Mac.
 
 Windows的同学请使用虚拟机。或者 cygwin。
 
-最快的安装方式:
-
-## 1. 前提
+# 安装（vim 7.x)
 
 你安装的是 vim 7.3+ 版本。
 
 Ubuntu:  `$ apt install vim`
 
-## 2. 复制配置文件
-
-就是把两个配置文件，都放到home目录下。
+在本地clone下来的文件夹中，运行：
 
 ```
 $ unzip vim_folder.zip      # 解压缩 这个文件.
@@ -40,18 +34,40 @@ $ cp .vimrc ~               # 把 配置文件 .vimrc 放到 HOME 目录.
 
 就安装好了. 这里用的是古老版本的 vim bundle 来管理插件的（似乎是这个名字）,大概是2013年前后
 
-# 安装（对于vim > 8.1 < vim 9.0 的版本)
+# 安装（vim 8: 8.1, 8.2, 8.3)
+
+1.安装vundle :
 
 ```
-
-$ unzip vim_folder.zip      # 解压缩 这个文件.
-$ cp .vim ~ -r              # 把 解压缩出来的.vim 文件夹放到 HOME目录
-$ cp dot_vimrc_for_vim8 ~/.vimrc               # 把 配置文件 .vimrc 放到 HOME 目录.
-$ vim
-$ :BundleInstall
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 ```
 
-就安装好了. 这里用的是Vundle的新版。(2016年以后出来的吧）
+2.clone本项目:
+
+```
+cp dot_vimrc_for_vim8 ~/.vimrc
+cp vim_folder.zip ~
+cd ~
+unzip vim_folder.zip
+```
+
+3.a 进入到vim中,然后
+
+```
+:PluginInstall
+```
+
+3.b 如果上述步骤(3.a)遇到错误的话，就这样：
+
+```
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
+进入vim
+
+:BundleInstall
+```
+
+就成功了
 
 # 安装（对于vim9.0 的版本)
 
@@ -78,9 +94,5 @@ $ :PlugInstall
 
 [最牛编辑器: Vim.  第三节](http://www.imooc.com/article/13275)
 
-# 欢迎贡献
 
-尽情的给我pull request吧!
-
-shensiwei@sina.com
 

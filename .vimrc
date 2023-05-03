@@ -1,3 +1,7 @@
+" fix error in ubuntu 22 ,then you should re-install vim 
+if has('python3')
+  silent! python3 1
+endif
 
 filetype on
 set langmenu=none
